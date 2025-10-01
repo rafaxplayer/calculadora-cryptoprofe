@@ -1,0 +1,22 @@
+{
+   "action": {
+      "default_icon": {
+         "128": "images/icon.png"
+      },
+      "default_popup": "popup.html"
+   },
+   "description": "Calcula el tamaño de la posición y el margen, basado en el balance, riesgo, precio de entrada y stop loss",
+   "icons": {
+      "128": "images/icon.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArjQDN5uNGtZitIzLXS8EyabR0xeqqOOsOMpLKV/hgDtVLNqwQvcRzPM57TDoiDXDOa5kJcqXeI3lmvfm/Ap4rnFd9Iw7fmYH5ftxFEF1zvLT4ZTRLPEnRIx06K9gkFoga9z24qndix9VL1LXPIkSVeJrrN6s6VM9DkCOIkuAlQtqppaa3GwQYpIeB88K3EPmKBFSd1gzFdaH9FuApnQ/HFM9v/BOskSOaPuAhxdRVz2Q0UkUdnZPdK+Wk4Q50zz/ot4qVwhNiTbBb1uA51OTII2L20VOsSb9BjidlorUVr5LcP1g4A2nNt1TT6QejT1vuHHwkscMsmp40+5UbXfY1wIDAQAB",
+   "manifest_version": 3,
+   "name": "Calculadora de Posición Crypto",
+   "permissions": [ "tabs" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.2",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "images/*.png" ]
+   } ]
+}
