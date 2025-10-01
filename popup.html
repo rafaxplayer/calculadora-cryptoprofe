@@ -136,75 +136,84 @@
     </style>
   </head>
   <body>
-    <div class="header">
-      <img src="images/icon.png" width="40" height="40" />
-      <h1>Calculadora CryptoProfe</h1>
-      <img id="max" src="images/max.png" title="Pantalla completa" />
+  <div class="header">
+    <img src="images/icon.png" width="40" height="40" />
+    <h1>Calculadora CryptoProfe</h1>
+    <img id="max" src="images/max.png" title="Pantalla completa" />
+  </div>
+
+  <div id="calculator-inputs">
+    <div class="input-group">
+      <label for="balance" class="input-label">Balance ($)</label>
+      <input type="number" id="balance" class="input-field" value="1000" />
+    </div>
+    <div class="input-group">
+      <label for="risk" class="input-label">Riesgo (%)</label>
+      <input type="number" id="risk" class="input-field" value="1" />
+    </div>
+    <div class="input-group">
+      <label for="entryPrice" class="input-label">Precio Entrada ($)</label>
+      <input type="number" id="entryPrice" class="input-field" value="29800" />
+    </div>
+    <div class="input-group">
+      <label for="stopLoss" class="input-label">Stop Loss ($) </label>
+      <input type="number" id="stopLoss" class="input-field" value="29000" />
+    </div>
+    <div class="input-group col-span-2">
+      <label for="leverage" class="input-label">Apalancamiento Ejem:x20</label>
+      <input type="number" id="leverage" class="input-field" value="20" />
+    </div>
+    
+    <div class="input-group">
+        <label for="tp1" class="input-label">TP1 ($)</label>
+        <input type="number" id="tp1" class="input-field" placeholder="Opcional" />
+    </div>
+    <div class="input-group">
+        <label for="tp2" class="input-label">TP2 ($)</label>
+        <input type="number" id="tp2" class="input-field" placeholder="Opcional" />
+    </div>
+    <div class="input-group col-span-2">
+        <label for="tp3" class="input-label">TP3 ($)</label>
+        <input type="number" id="tp3" class="input-field" placeholder="Opcional" />
+    </div>
     </div>
 
-    <div id="calculator-inputs">
-      <div class="input-group">
-        <label for="balance" class="input-label">Balance ($)</label>
-        <input type="number" id="balance" class="input-field" value="1000" />
+  <div id="results">
+    <div class="result-card">
+      <div class="result-item">
+        <span class="result-label">Capital a Arriesgar</span>
+        <span id="riskCapitalValue" class="result-value ">$0.00</span>
       </div>
-      <div class="input-group">
-        <label for="risk" class="input-label">Riesgo (%)</label>
-        <input type="number" id="risk" class="input-field" value="1" />
+      <div class="result-item">
+        <span class="result-label">Tamaño Posición (Crypto)</span>
+        <span id="positionSizeCrypto" class="result-value result-value-crypto">0.0000</span>
       </div>
-      <div class="input-group">
-        <label for="entryPrice" class="input-label">Precio Entrada ($)</label>
-        <input
-          type="number"
-          id="entryPrice"
-          class="input-field"
-          value="29800"
-        />
+      <div class="result-item">
+        <span class="result-label">Tamaño Posición ($)</span>
+        <span id="positionSizeUSD" class="result-value ">$0.00</span>
       </div>
-      <div class="input-group">
-        <label for="stopLoss" class="input-label">Stop Loss ($) </label>
-        <input type="number" id="stopLoss" class="input-field" value="29000" />
+      <div class="result-item">
+        <span id="marginRequiredLabel" class="result-label">Margen Requerido</span>
+        <span id="marginRequired" class="result-value ">$0.00</span>
       </div>
-      <div class="input-group col-span-2">
-        <label for="leverage" class="input-label"
-          >Apalancamiento Ejem:x20</label
-        >
-        <input type="number" id="leverage" class="input-field" value="20" />
+      
+      <div class="result-item">
+        <span class="result-label">Beneficio TP1</span>
+        <span id="profitTP1" class="result-value" style="color: #34d399;">$0.00</span>
       </div>
-    </div>
+      <div class="result-item">
+        <span class="result-label">Beneficio TP2</span>
+        <span id="profitTP2" class="result-value" style="color: #34d399;">$0.00</span>
+      </div>
+      <div class="result-item">
+        <span class="result-label">Beneficio TP3</span>
+        <span id="profitTP3" class="result-value" style="color: #34d399;">$0.00</span>
+      </div>
+      </div>
+  </div>
 
-    <div id="results">
-      <div class="result-card">
-        <div class="result-item">
-          <span class="result-label">Capital a Arriesgar</span>
-          <span id="riskCapitalValue" class="result-value "
-            >$0.00</span
-          >
-        </div>
-        <div class="result-item">
-          <span class="result-label">Tamaño Posición (Crypto)</span>
-          <span id="positionSizeCrypto" class="result-value result-value-crypto"
-            >0.0000</span
-          >
-        </div>
-        <div class="result-item">
-          <span class="result-label">Tamaño Posición ($)</span>
-          <span id="positionSizeUSD" class="result-value "
-            >$0.00</span
-          >
-        </div>
-        <div class="result-item">
-          <span id="marginRequiredLabel" class="result-label"
-            >Margen Requerido
-          </span>
-          <span id="marginRequired" class="result-value "
-            >$0.00</span
-          >
-        </div>
-      </div>
-    </div>
+  <p id="error-message"></p>
 
-    <p id="error-message"></p>
-
-    <script src="popup.js"></script>
-  </body>
+  <script src="popup.js"></script>
+</body>
 </html>
